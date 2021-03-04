@@ -11,6 +11,8 @@ body {
 main{
 	display: grid;
   grid-gap: 0.5rem;
+  grid-template-columns:[start] 10rem[second] 15rem[third] 5rem[end];
+  grid-template-rows: 5rem 10rem 3rem 1rem;
 }
 section {
   background-color: #888;
@@ -20,6 +22,16 @@ section {
   padding: 1rem;
 }
 
+.sect-a {
+  /*grid-column-start: 1;
+  grid-column-end: 3;
+  grid-column-start: start;
+  grid-column-end: end;*/
+  grid-column: 1/3;/*или start/third*/
+}
+.sect-c{
+  grid-row:2/4;
+}
 .sect-a::after {
   content: 'Section A';
 }
